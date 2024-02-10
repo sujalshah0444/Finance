@@ -1,0 +1,2 @@
+This is a project which I did while I was learning programming. It uses python, flask, SQL and also makes use of APIs to run this web application. We need to export API before running this web program from websites like https://api.iex.cloud/v1/data/core/quote/nflx?token=API_KEY
+I have learnt to how to implement and use various components of programming by building this web application.

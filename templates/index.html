@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block title %}
+Index Page
+{% endblock %}
+{% block main %}
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Shares</th>
+        <th>Bought Price</th>
+        <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tran in trans %}
+
+        <tr>
+            <th> {{ tran.symbol }}</th>
+            <th> {{ tran.name }}</th>
+            <th> {{ tran.totshare }}</th>
+            <th> {{ tran.price | usd }}</th>
+            <th> {{ tran.total | usd }}</th>
+
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>Total Cash: {{ cash | usd }}</th>
+            <th>Grand Total: {{ grands | usd }}</th>
+        </tr>
+    </tbody>
+
+</table>
+
+{% endblock %}
